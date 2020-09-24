@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A frontend dashboard for the
+TrackMe application" />
+    <meta name="author" content="ENTER YOUR NAME HERE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="control.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="area" >
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <div class="container">
+          <form action="/controller">
+            <form action="https://api.particle.io/v1/devices/e00fce6840ea4302e929d389/led?access_token=959b003ab023946bc507a368f0a638106b6dba47" method="POST">
+              <h1>Control Lights From Here</h1><br>
+              <br>
+              <label class="radio">
+                  <input type="radio" name="arg" value="yellow LED on">ON
+                  <span></span>
+              </label>
+              <br>
+              <label class="radio">
+                <input type="radio" name="arg" value="yellow LED off">OFF
+                <span></span>
+              </label>
+              <br>
+              <br>
+              <label class="button">
+                <input type="submit" value="GO!" href="/controller">
+              </label>
+            </form>
+          </form>
+        </div>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

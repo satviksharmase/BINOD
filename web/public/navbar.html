@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="./navbar.css"/>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>    <title>Nav</title>   
+
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i>
+</label>
+<label class="logo">BINOD</label>
+<ul>
+<li><a  href="/device-list">Patients Room List</a></li>
+<li><a  href="/record">Patient Records</a></li>
+<li><a  href="/reviews"> Reviews</a></li>
+<li><a  href="/send-command">Place Order</a></li>
+<li><a  href="/project">Control Devices</a></li>
+<li><a  href="/notification">Notifications</a></li>
+<li><a  onClick="logout()">Logout</a></li>
+</ul>
+</nav>
+<script>
+const isAuthenticated = localStorage.getItem('user');
+const loginElement = '<a class="nav-item nav-link" href="/login">Login</a>';
+const logoutElement = '<a class="nav-item nav-link"  onClick="logout()">Logout</a>';
+
+isAuthenticated
+? $('#auth-nav').append(logoutElement)
+: $('#auth-nav').append(loginElement);
+</script>
